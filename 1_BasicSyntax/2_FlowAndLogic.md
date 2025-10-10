@@ -128,13 +128,13 @@ users.each { |user| puts user }
 
 Ruby collections (arrays, hashes, ActiveRecord results, etc.) include many built-in iterator methods that you’ll use constantly as a Support Engineer.
 
-| Method                 | Description                                                                            | Example                        |      |                        |
-| ---------------------- | -------------------------------------------------------------------------------------- | ------------------------------ | ---- | ---------------------- |
-| **`.each`**            | Runs a block for every element (no return value).                                      | `orders.each {                 | o    | puts o.id }`           |
-| **`.each_with_index`** | Same as `.each`, but also provides an index counter.                                   | `users.each_with_index {       | u, i | puts "#{i+1}. #{u}" }` |
-| **`.map`**             | Creates a **new array** with the results of the block — perfect for transforming data. | `emails = users.map(&:email)`  |      |                        |
-| **`.select`**          | Returns only elements matching a condition. Doesn’t modify the original array.         | `active_users = users.select { | u    | u.active? }`           |
-| **`.find`**            | Returns the **first** element matching a condition. Stops after it finds one.          | `user = users.find {           | u    | u.id == 5 }`           |
+| Method                 | Description                                                                            | Example                                                    | 
+| ---------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------- | 
+| **`.each`**            | Runs a block for every element (no return value).                                      | `orders.each { \| o \| puts o.id }`                        | 
+| **`.each_with_index`** | Same as `.each`, but also provides an index counter.                                   | `users.each_with_index { \| u, i \| puts "#{i+1}. #{u}" }` | 
+| **`.map`**             | Creates a **new array** with the results of the block — perfect for transforming data. | `emails = users.map(&:email)`                              | 
+| **`.select`**          | Returns only elements matching a condition. Doesn’t modify the original array.         | `active_users = users.select { \| u \| u.active? }`        | 
+| **`.find`**            | Returns the **first** element matching a condition. Stops after it finds one.          | `user = users.find { \| u \| u.id == 5 }`                  | 
 
 ---
 
