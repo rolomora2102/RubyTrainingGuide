@@ -277,11 +277,11 @@ puts "All good!" unless errors.any?
 
 Ruby supports the common logical operators used in conditionals:
 
-| Operator | Meaning     | Example                   |            |       |   |               |
-| -------- | ----------- | ------------------------- | ---------- | ----- | - | ------------- |
-| `&&`     | Logical AND | `true && false` → `false` |            |       |   |               |
-| `        |             | `                         | Logical OR | `true |   | false`→`true` |
-| `!`      | Logical NOT | `!true` → `false`         |            |       |   |               |
+| Operator | Meaning     | Example                   |
+| -------- | ----------- | ------------------------- |
+| `&&`     | Logical AND | `true && false` → `false` |
+| `\|\|`   | Logical OR  | `true \|\| false` → `true`|
+| `!`      | Logical NOT | `!true` → `false`         | 
 
 You’ll also see the English-style versions (`and`, `or`, `not`) — these behave slightly differently in precedence, but for scripts, both are acceptable as long as they’re consistent.
 
@@ -472,13 +472,13 @@ colors[0..1]  # => ["red", "blue"]
 
 Ruby provides simple and intuitive methods for working with arrays:
 
-| Method               | Description                 | Example                              |   |           |
-| -------------------- | --------------------------- | ------------------------------------ | - | --------- |
-| `.first`             | Returns the first element   | `users.first`                        |   |           |
-| `.last`              | Returns the last element    | `users.last`                         |   |           |
-| `.length` or `.size` | Count of elements           | `users.size`                         |   |           |
-| `.include?`          | Checks if an element exists | `users.include?(“rolo@example.com”)` |   |           |
-| `.each`              | Iterates through elements   | `users.each {                        | u | puts u }` |
+| Method               | Description                 | Example                              |
+| -------------------- | --------------------------- | ------------------------------------ | 
+| `.first`             | Returns the first element   | `users.first`                        | 
+| `.last`              | Returns the last element    | `users.last`                         | 
+| `.length` or `.size` | Count of elements           | `users.size`                         |
+| `.include?`          | Checks if an element exists | `users.include?(“rolo@example.com”)` |
+| `.each`              | Iterates through elements   | `users.each { \|u\| puts u }`          |
 
 ---
 
@@ -556,12 +556,12 @@ user[:role] = "SSE"  # updates existing value
 
 ### Common Hash Methods
 
-| Method    | Description                   | Example                                            |      |                      |
-| --------- | ----------------------------- | -------------------------------------------------- | ---- | -------------------- |
-| `.keys`   | Returns all keys              | `user.keys` → `[:name, :role, :team]`              |      |                      |
-| `.values` | Returns all values            | `user.values` → `["Rolo", "SSE", "Veeqo Support"]` |      |                      |
-| `.each`   | Iterates over keys and values | `user.each {                                       | k, v | puts "#{k}: #{v}" }` |
-| `.merge`  | Combines two hashes           | `user.merge({ location: "CR" })`                   |      |                      |
+| Method    | Description                   | Example                                            | 
+| --------- | ----------------------------- | -------------------------------------------------- | 
+| `.keys`   | Returns all keys              | `user.keys` → `[:name, :role, :team]`              | 
+| `.values` | Returns all values            | `user.values` → `["Rolo", "SSE", "Veeqo Support"]` | 
+| `.each`   | Iterates over keys and values | `user.each { k, v \| puts "#{k}: #{v}" }`          | 
+| `.merge`  | Combines two hashes           | `user.merge({ location: "CR" })`                   | 
 
 ---
 
